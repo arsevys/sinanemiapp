@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+    <ImageView android:id="@+id/iviPhoto1"
+               android:layout_width="0dp"
+               android:layout_height="120dp"
+               android:adjustViewBounds="true"
+               android:src="@drawable/ic_holder_photo"
+               app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+               app:layout_constraintEnd_toStartOf="@+id/iviPhoto2" android:layout_marginTop="32dp"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView android:id="@+id/iviPhoto2"
+               android:layout_width="0dp"
+               android:layout_height="120dp"
+               android:adjustViewBounds="true"
+               android:src="@drawable/ic_holder_photo"
+               android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/iviPhoto1"
+               app:layout_constraintEnd_toStartOf="@+id/iviPhoto3" android:layout_marginEnd="8dp"
+               app:layout_constraintTop_toTopOf="@+id/iviPhoto1"/>
+    <ImageView android:id="@+id/iviPhoto3"
+               android:layout_width="0dp"
+               android:layout_height="120dp"
+               android:adjustViewBounds="true"
+               android:src="@drawable/ic_holder_photo"
+               app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+               app:layout_constraintStart_toEndOf="@+id/iviPhoto2"
+               app:layout_constraintTop_toTopOf="@+id/iviPhoto2"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnCam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_add_photo"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"/>
+
+</android.support.constraint.ConstraintLayout>
